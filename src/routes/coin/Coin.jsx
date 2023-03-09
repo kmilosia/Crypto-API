@@ -8,12 +8,14 @@ import DOMPurify from 'dompurify';
 function Coin() {
   const params = useParams();
   const [coin, setCoin] = useState({}); //default empty object
+  const [isLoading, setIsLoading] = useState(true);
 
   const url = `https://api.coingecko.com/api/v3/coins/${params.coinId}`;
 
   useEffect(() => {
     axios.get(url).then((response) => {
       setCoin(response.data);
+      setIsLoading(false);
     }).catch((error) => {
       console.log(error);
     })
@@ -21,6 +23,7 @@ function Coin() {
 
   return (
     <div>
+      {isLoading ? <h2>Loading...</h2> : 
       <div className="coin-container">
         <div className="card">
           <h1>{coin.name}</h1>
@@ -98,6 +101,7 @@ function Coin() {
           </div>
         </div>
       </div>
+    }
     </div>
   )
 }
