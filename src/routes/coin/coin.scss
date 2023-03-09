@@ -90,3 +90,49 @@ th{
         margin: .5rem 0;
     }
 }
+
+.loader-container {
+    display: flex;
+    max-width: max-content;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .loader {
+    width: 180px;
+    height: 80px;
+    margin: auto;
+    display: flex;
+  }
+  .circle {
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    border-radius: 50%;
+    margin: 0 15px;
+    animation: jump 1s linear infinite
+
+  }
+  .loader-caption {
+    margin: auto;
+    font-size: 1.5rem;
+  }
+  @keyframes jump {
+    0% {
+      margin-top: 0;
+    }
+    35% {
+      margin-top: -75px;
+    }
+    70% {
+      margin-top: 0px;
+    }
+  }
+  #b {
+    animation-delay: 0.2s;
+  }
+  #c {
+    animation-delay: 0.4s;
+  }

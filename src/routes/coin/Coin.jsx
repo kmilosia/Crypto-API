@@ -4,6 +4,7 @@ import axios from 'axios';
 import { useState,useEffect } from 'react';
 import {useParams} from 'react-router-dom';
 import DOMPurify from 'dompurify';
+//import Loader from '../loader/Loader';
 
 function Coin() {
   const params = useParams();
@@ -23,7 +24,14 @@ function Coin() {
 
   return (
     <div>
-      {isLoading ? <h2>Loading...</h2> : 
+      {isLoading ? <div class ="loader-container">
+      <div class="loader">
+        <div class="circle" id="a"></div>
+        <div class="circle" id="b"></div>
+        <div class="circle" id="c"></div>
+      </div>
+      <div class="loader-caption">Fetching data...</div>
+    </div> : 
       <div className="coin-container">
         <div className="card">
           <h1>{coin.name}</h1>
