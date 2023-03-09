@@ -6,7 +6,7 @@ function Navbar() {
   return (
     <nav>
         <FaCoins className="icon" />
-        <h1>Coin<span className='purple'>Search</span></h1>
+        <h1>Coin <span className='purple'>Search</span></h1>
     </nav>
   )
 }

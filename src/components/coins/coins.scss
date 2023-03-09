@@ -1,0 +1,48 @@
+@import '../../utilities/variables';
+
+@mixin row($fontWeight){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $backgroundColor;
+    box-shadow: 0px 0px 12px $boxshadowColor;
+    border-radius: 8px;
+    margin: 2rem 1rem;
+    padding: 0.7rem 1rem;
+    font-weight: $fontWeight;
+}
+.container{
+    max-width: 1140px;
+    margin: auto;
+}
+.heading{
+    @include row(300);
+}
+.coin-name{
+    margin-left: -4rem;
+}
+
+.coin-row{
+    @include row(500);
+    &:hover{
+        transform: scale(1.04);
+        transition: 0.3s ease-in-out;
+        cursor: pointer;
+    }
+}
+
+img{
+    height: 40px;
+    margin-right: 8px;
+    width: auto;
+}
+.image-symbol{
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 720px) {
+    .hide-mobile{
+        display: none;
+    }
+}

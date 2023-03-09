@@ -1,4 +1,5 @@
 import React from 'react';
+import './coins.css';
 import CoinItem from '../coin-item/CoinItem';
 
 

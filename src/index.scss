@@ -1,0 +1,24 @@
+@import './utilities/variables';
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0;
+    font-family: $fontFamily;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    background-color: $backgroundColor;
+    color: $fontColor;
+  }
+  a{
+    color: $fontColor;
+    text-decoration: none;
+  }
+  h1{
+    text-align: center;
+    margin: 1rem;
+  }
+  
